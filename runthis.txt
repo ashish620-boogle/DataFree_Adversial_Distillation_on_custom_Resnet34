@@ -1,0 +1,6 @@
+python image_generator_pf.py --generator-path "checkpoint/student/cifar100-resnet10-generator.pt" --z-dim 256 --num-images 16  --save-path output/generated_cifar100.png
+
+python DFAD_cifar.py --dataset cifar100 --model "resnet34_20_logGloss" --epochs 500
+
+python image_generator_pf.py --generator-path "checkpoint/student/cifar100-cifar100_resnet50_MSE_logGloss-generator.pt" --z-dim 100 --num-images 16  --save-path output/generated_cifar100.png
+python image_generator_pf.py --generator-path "checkpoint/student/cifar100-resnet10-generator.pt" --z-dim 100 --num-images 16  --save-path output/generated_cifar100.png
